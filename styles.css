@@ -1,0 +1,217 @@
+@import url(./vendor/input_range/input_range.css);
+@import url(./vendor/input_checkbox/checkbox.css);
+
+@font-face {
+    font-family: "JetBrains";
+    src: url(./starter-code/assets/fonts/JetBrainsMono-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --very_dark_grey: #18171F;
+    --dark_grey: #24232C;
+    --grey: #817D92;
+    --almost_white: #E6E5EA;
+    --neon_green: #A4FFAF;
+    --yellow: #F8CD65;
+    --orange: #FB7C58;
+    --red: #F64A4A;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "JetBrains", sans-serif;
+    font-size: 16px;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-color: var(--very_dark_grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 37.5vw;
+    max-width: 540px;
+    /* background-color: var(--dark_grey); */
+}
+
+.card .header {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--grey);
+    text-align: center;
+}
+
+.header .password_wrapper {
+    background-color: var(--dark_grey);
+    position: relative;
+}
+
+.password_wrapper input {
+    width: 100%;
+    height: 100%;
+    padding: 1.25rem 2rem;
+    color: var(--almost_white);
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--dark_grey);
+    outline: none;
+    border: unset;
+}
+
+.password_wrapper img {
+    width: 1.25rem;
+    height: 1.5rem;
+    object-fit: cover;
+    position: absolute;
+    top: calc(50% - 1.5rem / 2);
+    right: 1.75rem;
+}
+
+.card .body {
+    margin-top: 1.5rem;
+    background-color: var(--dark_grey);
+    padding: 1.5rem 2rem;
+}
+
+.form_control {
+    width: 100%;
+    height: 100%;
+    outline: unset;
+    border: unset;
+}
+
+.form_control .label_group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem
+}
+
+.label_group .range {
+    color: var(--neon_green);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.label_group label {
+    color: var(--almost_white);
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.options {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.option {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    color: var(--almost_white);
+    font-size: 1.125rem;
+}
+
+.strength {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--very_dark_grey);
+    margin-top: 2rem;
+    padding: 1.5rem 2rem;
+}
+
+.strength .title {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: var(--grey);
+    text-transform: uppercase;
+}
+
+.strength .status {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+}
+
+.status .status_message {
+    color: var(--almost_white);
+    text-transform: uppercase;
+}
+
+.status_chart {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: .5rem;
+}
+
+.status_chart .column {
+    width: 0.625rem;
+    min-height: 1.75rem;
+    border: 2px solid var(--almost_white);
+}
+
+.generate {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1.25rem 0rem;
+    background-color: var(--neon_green);
+    color: var(--very_dark_grey);
+    font-size: 1.125rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.generate img {
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-left: 1.5rem;
+}
+
+@media (max-width:1023px) {
+
+    html,
+    body {
+        font-size: 14px;
+    }
+
+    .card {
+        width: 75vw;
+    }
+}
+
+@media (max-width:767px) {
+
+    html,
+    body {
+        font-size: 12px;
+    }
+
+    .card {
+        width: 95vw;
+    }
+}

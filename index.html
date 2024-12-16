@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-
+  <link rel="icon" type="image/png" sizes="32x32" href="./starter-code/assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
   <title>Frontend Mentor | Password generator app</title>
 </head>
 
@@ -17,16 +17,16 @@
         <h1>Password Generator</h1>
         <div class="password_wrapper">
           <input type="text" readonly class="password" placeholder="P4$5W0rD!"></input>
-          <img src="./assets/images/icon-copy.svg" alt="icon-copy">
+          <img src="./starter-code/assets/images/icon-copy.svg" alt="icon-copy">
         </div>
       </div>
       <form class="body">
         <fieldset class="form_control">
           <div class="label_group">
             <label>Character Length</label>
-            <span class="range">10</span>
+            <span id="range_text" class="range">10</span>
           </div>
-          <input type="range" name="noc" min="0" max="20">
+          <input type="range" id="range" name="noc" min="0" max="20">
         </fieldset>
         <div class="options">
           <div class="option">
@@ -58,11 +58,12 @@
             </div>
           </div>
         </div>
-        <input type="submit" class="generate" value="generate"></input>
+        
+        <button type="submit" class="generate" ><span>generate</span><img src="./starter-code/assets/images/icon-arrow-right.svg" alt=""></button>
       </form>
     </div>
   </main>
-
+<script src="./vendor/input_range/input_range.js"></script>
 </body>
 
 </html>
