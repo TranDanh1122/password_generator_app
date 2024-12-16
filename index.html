@@ -16,17 +16,24 @@
       <div class="header">
         <h1>Password Generator</h1>
         <div class="password_wrapper">
-          <input type="text" readonly class="password" placeholder="P4$5W0rD!"></input>
-          <img src="./starter-code/assets/images/icon-copy.svg" alt="icon-copy">
+          <input type="text" readonly id="password" class="password" placeholder="P4$5W0rD!"></input>
+          <div class="copy">
+            <span id="copied">COPIED!</span>
+            <svg id="copy" width="21" height="24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.341 3.091 17.909.659A2.25 2.25 0 0 0 16.319 0H8.25A2.25 2.25 0 0 0 6 2.25V4.5H2.25A2.25 2.25 0 0 0 0 6.75v15A2.25 2.25 0 0 0 2.25 24h10.5A2.25 2.25 0 0 0 15 21.75V19.5h3.75A2.25 2.25 0 0 0 21 17.25V4.682a2.25 2.25 0 0 0-.659-1.591ZM12.469 21.75H2.53a.281.281 0 0 1-.281-.281V7.03a.281.281 0 0 1 .281-.281H6v10.5a2.25 2.25 0 0 0 2.25 2.25h4.5v1.969a.282.282 0 0 1-.281.281Zm6-4.5H8.53a.281.281 0 0 1-.281-.281V2.53a.281.281 0 0 1 .281-.281H13.5v4.125c0 .621.504 1.125 1.125 1.125h4.125v9.469a.282.282 0 0 1-.281.281Zm.281-12h-3v-3h.451c.075 0 .147.03.2.082L18.667 4.6a.283.283 0 0 1 .082.199v.451Z" />
+            </svg>
+          </div>
+
         </div>
       </div>
-      <form class="body">
+      <form id="form_password" class="body">
         <fieldset class="form_control">
           <div class="label_group">
             <label>Character Length</label>
-            <span id="range_text" class="range">10</span>
+            <span id="range_text" class="range">6</span>
           </div>
-          <input type="range" id="range" name="noc" min="0" max="20">
+          <input type="range" id="range" name="noc" min="6" max="20" value="6">
         </fieldset>
         <div class="options">
           <div class="option">
@@ -48,8 +55,8 @@
         </div>
         <div class="strength">
           <span class="title"> Strength </span>
-          <div  class="status">
-            <span class="status_message"></span>
+          <div secureLevel="" id="status" class="status">
+            <span id="status_message" class="status_message"></span>
             <div class="status_chart">
               <div class="column"></div>
               <div class="column"></div>
@@ -58,12 +65,16 @@
             </div>
           </div>
         </div>
-        
-        <button type="submit" class="generate" ><span>generate</span><img src="./starter-code/assets/images/icon-arrow-right.svg" alt=""></button>
+
+        <button type="submit" id="generate" class="generate"><span>generate</span><svg width="12" height="12"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z" />
+          </svg></button>
       </form>
     </div>
   </main>
-<script src="./vendor/input_range/input_range.js"></script>
+  <script src="./vendor/input_range/input_range.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>

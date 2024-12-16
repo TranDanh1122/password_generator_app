@@ -76,16 +76,35 @@ main {
     outline: none;
     border: unset;
 }
-
-.password_wrapper img {
-    width: 1.25rem;
-    height: 1.5rem;
-    object-fit: cover;
-    position: absolute;
+.password_wrapper .copy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; 
+    gap: 1rem;
     top: calc(50% - 1.5rem / 2);
     right: 1.75rem;
 }
-
+.copy span {
+    color: var(--neon_green);
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    font-weight: bold;
+    display: none;
+}
+.copy span[active] {
+    display: block;
+}
+.password_wrapper svg {
+    width: 1.25rem;
+    height: 1.5rem;
+    object-fit: cover;
+    cursor: pointer;
+    fill: var(--neon_green);
+}
+.password_wrapper svg:hover {
+    fill: var(--almost_white);
+}
 .card .body {
     margin-top: 1.5rem;
     background-color: var(--dark_grey);
@@ -112,10 +131,11 @@ main {
     font-weight: bold;
 }
 
-.label_group label {
+label {
     color: var(--almost_white);
     font-size: 1.125rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .options {
@@ -154,6 +174,7 @@ main {
 .strength .status {
     display: flex;
     flex-flow: row nowrap;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -175,6 +196,26 @@ main {
     border: 2px solid var(--almost_white);
 }
 
+.status[secureLevel="too_weak"] .column:first-child {
+    border: unset;
+    background-color: var(--red);
+}
+
+.status[secureLevel="weak"] .column:nth-child(-n + 2) {
+    border: unset;
+    background-color: var(--orange);
+}
+
+.status[secureLevel="medium"] .column:nth-child(-n + 3) {
+    border: unset;
+    background-color: var(--yellow);
+}
+
+.status[secureLevel="strong"] .column:nth-child(-n + 4) {
+    border: unset;
+    background-color: var(--neon_green);
+}
+
 .generate {
     margin-top: 2rem;
     width: 100%;
@@ -184,12 +225,23 @@ main {
     font-size: 1.125rem;
     font-weight: bold;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
-.generate img {
+.generate svg {
     width: 0.75rem;
     height: 0.75rem;
     margin-left: 1.5rem;
+}
+
+.generate:hover {
+    color: var(--neon_green);
+    background-color: var(--very_dark_grey);
+    border: 2px solid var(--neon_green);
+}
+
+.generate:hover svg {
+    fill: var(--neon_green);
 }
 
 @media (max-width:1023px) {

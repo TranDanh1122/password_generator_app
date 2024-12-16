@@ -1,5 +1,5 @@
 input[type="range"] {
-    background: linear-gradient(to right, var(--neon_green) 50%, var(--very_dark_grey) 50%);
+    background: linear-gradient(to right, var(--neon_green) 0%, var(--very_dark_grey) 0%);
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
