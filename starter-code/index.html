@@ -1,29 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Password generator app</title>
 </head>
+
 <body>
-
-  Password Generator
-
-  P4$5W0rD!
-
-  Character Length
-
-  Include Uppercase Letters
-  Include Lowercase Letters
-  Include Numbers
-  Include Symbols
-
-  Strength
-
-  Generate
+  <main>
+    <div class="card">
+      <div class="header">
+        <h1>Password Generator</h1>
+        <div class="password_wrapper">
+          <input type="text" readonly class="password" placeholder="P4$5W0rD!"></input>
+          <img src="./assets/images/icon-copy.svg" alt="icon-copy">
+        </div>
+      </div>
+      <form class="body">
+        <fieldset class="form_control">
+          <div class="label_group">
+            <label>Character Length</label>
+            <span class="range">10</span>
+          </div>
+          <input type="range" name="noc" min="0" max="20">
+        </fieldset>
+        <div class="options">
+          <div class="option">
+            <label for="uppercase">Include Uppercase Letters </label>
+            <input id="uppercase" type="checkbox" name="uppercase">
+          </div>
+          <div class="option">
+            <label for="lowercase">Include Lowercase Letters</label>
+            <input id="lowercase" type="checkbox" name="lowercase">
+          </div>
+          <div class="option">
+            <label for="number"> Include Numbers</label>
+            <input id="number" type="checkbox" name="number">
+          </div>
+          <div class="option">
+            <label for="symbols">Include Symbols</label>
+            <input id="symbols" type="checkbox" name="symbols">
+          </div>
+        </div>
+        <div class="strength">
+          <span class="title"> Strength </span>
+          <div  class="status">
+            <span class="status_message"></span>
+            <div class="status_chart">
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column"></div>
+            </div>
+          </div>
+        </div>
+        <input type="submit" class="generate" value="generate"></input>
+      </form>
+    </div>
+  </main>
 
 </body>
+
 </html>
